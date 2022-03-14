@@ -1,5 +1,18 @@
 <div class="container">
-
+  <p>
+      <mat-toolbar color="primary">
+          <span>Gestion dépenses</span>
+          <button mat-button aria-label="dashboard" [routerLink]="['/dashboard']">
+              <mat-icon>home</mat-icon>
+              Accueil
+          </button>
+          <span class="groupe-droit"></span>
+          <button mat-button  aria-label="List icon" [routerLink]="['/personnes']">
+              <mat-icon>list</mat-icon>
+              Liste
+          </button>
+      </mat-toolbar>
+  </p>
   <router-outlet></router-outlet>
   <app-show-messages></app-show-messages>
-  </div>
+</div>

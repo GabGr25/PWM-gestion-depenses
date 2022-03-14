@@ -5,7 +5,9 @@ import {MessagesService} from "./messages.service";
 @Component({
   selector: 'app-show-messages',
   template: `
-    <mat-accordion>
+    
+
+    <mat-accordion *ngIf="!messagesService.isEmpty()">
     <mat-expansion-panel (opened)="panelOpenState = true"
                          (closed)="panelOpenState = false">
       <mat-expansion-panel-header>
@@ -24,6 +26,8 @@ import {MessagesService} from "./messages.service";
       </mat-list>
     </mat-expansion-panel>
     </mat-accordion>
+
+    
   `,
   styles: [
     '.container {display: flex;flex-direction: column;justify-content: space-between;height: 100vh}'

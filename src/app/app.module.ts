@@ -13,15 +13,24 @@ import {MatCardModule} from "@angular/material/card";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatIconModule} from "@angular/material/icon";
 import {MatChipsModule} from "@angular/material/chips";
+import {MatToolbarModule} from "@angular/material/toolbar"
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatExpansionModule} from "@angular/material/expansion"
 import {MatListModule} from "@angular/material/list"
 import { PersonnesService } from './personnes.service';
+import { ListePersonnesComponent } from './liste-personnes.component';
+import { DashboardComponent } from './dashboard.component';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { DetailsPersonneComponent } from './details-personne.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowMessagesComponent,
+    ListePersonnesComponent,
+    DashboardComponent,
+    PageNotFoundComponent,
+    DetailsPersonneComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +43,8 @@ import { PersonnesService } from './personnes.service';
     MatChipsModule,
     MatGridListModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatToolbarModule
   ],
   providers: [MessagesService, PersonnesService],
   bootstrap: [AppComponent]
