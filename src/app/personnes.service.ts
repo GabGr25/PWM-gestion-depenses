@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Depense } from './depense';
 import { Datas } from './mock-datas';
 import {Personne} from './personne';
 
@@ -36,5 +37,17 @@ export class PersonnesService {
         return this.personnes[index];
     }
     return this.personnes[0]
+  }
+
+  totalDepense(id:number):number{
+    let total : Depense=<Depense>{};
+    let pers: Personne | undefined= this.getPersonne(id);
+    if(!pers)
+      return 0;
+    return pers.depenses.reduce((total : Depense, current: Depense)=>{
+      total.montant+=current.montant;
+      return total;
+
+    }, <Depense>{montant:0}).montant;
   }
 }

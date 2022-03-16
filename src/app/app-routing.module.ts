@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { DetailsPersonneComponent } from './details-personne.component';
 
 const routes: Routes = [
+  {path: 'personnes/:id', component: DetailsPersonneComponent},
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'personnes', component: ListePersonnesComponent},
